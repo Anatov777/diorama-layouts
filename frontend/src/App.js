@@ -14,7 +14,17 @@ function App() {
       <div className="App">
         <div className="wrapper">
           <header id="header" className="header">
-            <Link to="/" exact={true}><img src="favicon.ico"/></Link>
+            <div className="headdiv">
+              <Link to="/" exact={true}><img className="logo-image" src="favicon.ico"/></Link>
+              <div>
+                <h1 className="div-h1">Order diorama</h1>
+              </div>
+              <div>
+                <h1 className="div-h1-2">Order diorama</h1>
+              </div>
+              
+            </div>
+            
           </header>
             <main className="main">
               <Switch>
@@ -33,6 +43,8 @@ function App() {
               </div>
             </nav>
           <footer className="footer">
+            This is Footer<br/>
+            This is Footer<br/>
             This is Footer
           </footer>
         </div>

@@ -55,6 +55,7 @@ export default class DioramasPage extends React.Component {
     return (
       <div>
         <div>
+          Dioramas
           <table className="table table-hover">
             <PaginacionTabla
               itemsperpage={2}
@@ -66,7 +67,6 @@ export default class DioramasPage extends React.Component {
         </div>
         <div>
           {/* <LoginPage /> */}
-          Dioramas
         </div>
       </div>
     );
