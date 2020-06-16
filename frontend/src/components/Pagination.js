@@ -5,9 +5,12 @@ const buttonStyles = {
   border: "1px solid #ccc",
   background: "#fff",
   fontSize: "1em",
-  padding: 10,
+  padding: 0,
   margin: 5,
-  width: 70
+  width: 30,
+  height: 20,
+  'text-align' : 'center',
+  
 };
 
 const PaginacionTabla = ({ itemsperpage, nocolumns, items, pagesspan }) => {
