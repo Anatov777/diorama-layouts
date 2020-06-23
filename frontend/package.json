@@ -12,6 +12,7 @@
     "package.json": "^2.0.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-headroom": "^3.0.0",
     "react-next-paging": "^7.0.7",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1",

@@ -7,37 +7,28 @@ import HomePage from "./components/Home"
 import DioramasPage from "./components/Diorama"
 import ContactsPage from "./components/Contacts"
 import DioramaDetailPage from "./components/DioramaDetails";
+import Headroom from 'react-headroom'
 
 
 function App() {
-  let hidden = "hidden";
+  let shouldHide = false;
   return (
     <BrowserRouter>
       <div className="App">
-        <div className="wrapper" onWheel={event => {
-          if (event.nativeEvent.deltaY > 0) {
-            console.log('scroll up');
-          } else {
-            console.log('scroll down');
-            //  document.getElementById('nav').attributes.id;
-            document.getElementById('nav').attributes.hidden = 'true';
-            console.log(document.getElementById('nav').attributes
-            )
-          }
-        }}>
+        <div className="wrapper">
           <header id="header" className="header">
             <div className="headdiv">
-              <Link to="/" exact={true} className="logo-image"><img src="favicon.ico" /></Link>
-              <h1 className="div-h1">Order diorama</h1>
-              <h1 className="div-h1-2">
-
-                <Link to="/vk" exact={true} className="icon-link">
+              {/* <Link to="/" exact={true} className="logo-image"><img src="favicon.ico" /></Link> */}
+              <h1>Order diorama</h1>
+              <img src="/images/bgimages/mountains.svg" alt="mountains" />
+              <div className="icons">
+                <Link to="/vk" exact={true} className="icon-link" target="_blank">
                   <img src="/images/icons/vk.svg" alt="vk" />
                 </Link>
-                <Link to="/instagram" exact={true} className="icon-link">
+                <Link to="/instagram" exact={true} className="icon-link" target="_blank">
                   <img src="/images/icons/inst.svg" alt="instagram" />
                 </Link>
-              </h1>
+              </div>
             </div>
 
           </header>
@@ -59,13 +50,17 @@ function App() {
               <NavLink to="/contacts" exact={true}>Contacts</NavLink>
             </div>
           </nav> */}
+
           <nav role='navigation' id="nav">
-            <ul>
-              <li><NavLink to="/" exact={true}>Home</NavLink></li>
-              <li><NavLink to="/dioramas" exact={true}>Layouts</NavLink></li>
-              <li><NavLink to="/contacts" exact={true}>Contacts</NavLink></li>
-            </ul>
+            <Headroom upTolerance={1}>
+              <ul>
+                <li><NavLink to="/" exact={true}>Home</NavLink></li>
+                <li><NavLink to="/dioramas" exact={true}>Layouts</NavLink></li>
+                <li><NavLink to="/contacts" exact={true}>Contacts</NavLink></li>
+              </ul>
+            </Headroom>
           </nav>
+
 
           <footer className="footer">
             This is Footer<br />
