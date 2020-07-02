@@ -13,24 +13,14 @@ body {
 
 .wrapper {
   display: grid;
-  /* grid-template-columns: 76.39320225% 23.60679775%; */
-  /* grid-template-columns: 1fr; */
-  /* grid-template-rows: 1fr 1fr 1fr 1fr; */
   width: 100%;
-  /* border-style: solid;
-  border-color: #3f6fb6; */
-  /* min-height: 100vh; */
-  /* margin-top: 5%; */
 }
 
 .header {
-  /* grid-column: 1 / span 2; */
   grid-row: 2;
   border-color: #3f6fb6;
   background-color: #caadc865;
   min-height: 19vh;
-  /* max-height: 19vh; */
-  /* background: url(/images/bgimages/mountains.svg) no-repeat; */
   background-size: 100% 100%;
   border-bottom-color: #409aef; /* Цвет линии слева */
   border-bottom-style: dotted; /* Стиль линии */
@@ -40,33 +30,20 @@ body {
 .headdiv {
   display: grid;
   grid-template-columns: 38% 62%;
-  /* grid-template-rows: 33% 33% 33%; */
   align-items: center;
   min-height: 100%;
   height: 19vh;
-  /* width: 100%; */
-  /* max-height: 100px; */
-  /* overflow: hidden; */
-  /* border-style: solid; */
 }
 
 h1 {
   grid-column: 1;
-  /* grid-row: 1 / span 3; */
-  /* border-style: solid; */
 }
 
 .icons {
   grid-column: 1;
-  /* grid-row: 3; */
-  /* border-style: solid; */
-  /* place-self: start; */
-  /* align-self: end; */
 }
 
 header > div > img {
-  /* border-style: solid; */
-  /* position: relative; */
   height: 100%;
   width: 100%;
   grid-column: 2;
@@ -74,25 +51,11 @@ header > div > img {
 }
 
 .main {
-  /* grid-column: 1; */
   grid-row: 3;
   min-height: 62vh;
 }
 
-.navigation {
-  /* grid-column: 2; */
-  /* grid-row: 3; */
-  border-left-color: #409aef; /* Цвет линии слева */
-  border-left-style: dotted; /* Стиль линии */
-  border-width: 0.1rem; /* Толщина линии */
-  /* border-style: solid; */
-  /* border-color: #000000; */
-  /* height: 300px; */
-}
-
 nav{
-  /* position: fixed; */
-  /* grid-row: 1; */
   top: 0;
   left: 0;
   width: 100%;
@@ -102,18 +65,8 @@ nav{
 }
   nav ul{
     list-style: none;
-    /* position: relative; */
-    
     margin-left: 10%;
-    /* display: inline-table; */
-    
   }
-    /* nav ul li{
-      float: left;
-      -webkit-transition: all .2s ease-in-out;
-      -moz-transition: all .2s ease-in-out;
-      transition: all .2s ease-in-out;
-    } */
 
     nav ul li:hover{background: rgba(0,0,0,.15);}
     nav a.active{ background-color: #228b22; }
@@ -135,21 +88,12 @@ nav{
       }
 
 .footer {
-  /* grid-column: 1 / span 2; */
   grid-row: 4;
   background-color: #3f3f3f;
   color: #ffffff;
   background-size: cover;
   max-height: 5rem;
-  /* grid-row-end: 3; */
   min-height: 19vh;
-}
-
-.pill-nav {
-  /* border-style: solid; */
-  /* background: url(/images/bgimages/border.svg) no-repeat; */
-  /* background-size: contain; */
-  /* width: 100%; */
 }
 
 .nav_style {
@@ -193,12 +137,6 @@ nav{
 .logo-image {
   grid-column: 1;
   grid-row: 1 / span 3;
-  /* border: #228b22; */
-  /* border-style: solid; */
-}
-
-.icon-link {
-  /* target-new: window; */
 }
 
 .icon-link > img {
@@ -213,44 +151,36 @@ nav{
   row-gap: 15px;
   column-gap: 2%;
   margin: 0% 3% 0 3%;
-  /* text-align: center; */
-}
-
-.col-4 {
-  /* border-style: solid; */
-  /* margin-top: 5px; */
-  /* display: grid; */
 }
 
 .card {
   border-style: solid;
   border-width: thin;
-  /* margin: 30px; */
   background-color: #fff;
-  /* padding: 15px; */
-  /* max-height: 300px; */
 }
 
 .img-area {
-  /* display: grid; */
-  /* height: 250px; */
   justify-items: center;
-  /* align-items: center; */
-  /* border-style: solid; */
 }
 
 .img-list {
   width: 100%;
 }
 
-/* .card-text {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  max-height: 20px;
-} */
-
 .card-title {
-  margin-top: 5%;
+  margin-top: 1%;
+}
+
+.card-body {
+  margin: 15px 15px 15px 15px;
+}
+
+.card-text {
+  margin-top: 15px;
+}
+
+.back-link {
+  text-align: left;
 }
 
 .table {
@@ -260,15 +190,12 @@ nav{
 @media (max-width: 1070px) {
   .row {
     grid-template-columns: 1fr 1fr;
-    /* column-gap: 2%; */
-    /* margin: 60px; */
   }
 }
 
 @media (max-width: 780px) {
   .row {
     grid-template-columns: 1fr;
-    /* margin: 150px; */
   }
 }
 
@@ -306,8 +233,6 @@ nav{
   margin: 0;
   font-family: 'Lato', sans-serif;
 }
-
-/*| Navigation |*/
 
 .headroom--pinned {
   background-color: rgb(69, 205, 223);

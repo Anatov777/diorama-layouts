@@ -9,7 +9,7 @@ const buttonStyles = {
   margin: 5,
   width: 30,
   height: 20,
-  'text-align' : 'center',
+  textAlign : 'center',
   
 };
 
@@ -40,11 +40,11 @@ const PaginacionTabla = ({ itemsperpage, nocolumns, items, pagesspan }) => {
         goFastFwdBdisabled
       }) => (
         <tbody>
-          <div className="row">
+          <tr className="row">
             {items.slice(initialitem, lastitem).map((item, index) => {
               return item;
             })}
-          </div>
+          </tr>
           {noitems > 0
             ? [
                 <tr key={"pagingrow" + 100}>
@@ -68,13 +68,15 @@ const PaginacionTabla = ({ itemsperpage, nocolumns, items, pagesspan }) => {
                       (v, i) => i + inipagearray
                     ).map(page => {
                       return (
-                        <button
-                          key={page}
-                          {...getSelPageButtonProps({ page: page })}
-                          disabled={currentpage == page}
-                        >
-                          {page}
-                        </button>
+                        <a href="#dioramas" key={page}>
+                          <button
+                            
+                            {...getSelPageButtonProps({ page: page })}
+                            disabled={currentpage === page}
+                          >
+                            {page}
+                          </button>
+                        </a>
                       );
                     })}
                     <button

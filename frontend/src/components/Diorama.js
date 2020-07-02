@@ -1,13 +1,8 @@
-import React, { Component } from 'react';
+import React from 'react';
 import axios from "axios";
-
-// import { Pagination, PaginationItem, PaginationLink } from 'reactstrap';
-// import 'bootstrap/dist/css/bootstrap.min.css';
 import PaginacionTabla from "./Pagination";
-// import LoginPage from "./SignupLogin";
-import { BrowserRouter, Route, Link, Switch } from "react-router-dom";
+import { Link } from "react-router-dom";
 
-import DioramaDetailPage from "./DioramaDetails";
 
 
 export default class DioramasPage extends React.Component {
@@ -31,31 +26,25 @@ export default class DioramasPage extends React.Component {
 
   renderItems = () => {
     const newItems = this.state.layoutsList;
+    
     return newItems.map(item => (
-      <div className="col-4">
-        <div className="card">
+        <td className="card" key={item.id}>
           <div className="img-area">
-            <Link to={"/dioramas/" + item.id}><img src={item.imgpath} className="img-list" alt="..." /></Link>
+            <Link to={"/dioramas/" + item.id}><img src={item.imgpath.split(";")[0]} className="img-list" alt="..." /></Link>
           </div>
           <div className="card-body">
             <h3 className="card-title">{item.title}</h3>
-            {/* <p className="card-text">{item.description}</p> */}
             <Link to={"/dioramas/" + item.id} className="btn-more" > More </Link>
           </div>
-        </div>
-      </div>
+        </td>
     ));
   };
-
-
-
-
 
   render() {
     return (
       <div>
         <div>
-          <h2>
+          <h2 id="dioramas">
             Dioramas
           </h2>
           <table className="table table-hover">

@@ -1,7 +1,5 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-
 import { BrowserRouter, Route, NavLink, Link, Switch } from "react-router-dom";
 import HomePage from "./components/Home"
 import DioramasPage from "./components/Diorama"
@@ -11,21 +9,19 @@ import Headroom from 'react-headroom'
 
 
 function App() {
-  let shouldHide = false;
   return (
     <BrowserRouter>
       <div className="App">
         <div className="wrapper">
           <header id="header" className="header">
             <div className="headdiv">
-              {/* <Link to="/" exact={true} className="logo-image"><img src="favicon.ico" /></Link> */}
               <h1>Order diorama</h1>
               <img src="/images/bgimages/mountains.svg" alt="mountains" />
               <div className="icons">
-                <Link to="/vk" exact={true} className="icon-link" target="_blank">
+                <Link to="/vk" exact={"true"} className="icon-link" target="_blank">
                   <img src="/images/icons/vk.svg" alt="vk" />
                 </Link>
-                <Link to="/instagram" exact={true} className="icon-link" target="_blank">
+                <Link to="/instagram" exact={"true"} className="icon-link" target="_blank">
                   <img src="/images/icons/inst.svg" alt="instagram" />
                 </Link>
               </div>
@@ -41,16 +37,7 @@ function App() {
             <Route exact={true} path="/dioramas/:id" component={DioramaDetailPage} />
             <Route path='/vk' component={() => { window.location = 'https://vk.com/'; return null; }} />
             <Route path='/instagram' component={() => { window.location = 'https://instagram.com/'; return null; }} />
-
           </main>
-          {/* <nav className="navigation">
-            <div className="pill-nav">
-              <NavLink to="/" exact={true}>Home</NavLink>
-              <NavLink to="/dioramas" exact={true}>Layouts</NavLink>
-              <NavLink to="/contacts" exact={true}>Contacts</NavLink>
-            </div>
-          </nav> */}
-
           <nav role='navigation' id="nav">
             <Headroom upTolerance={1}>
               <ul>
@@ -60,8 +47,6 @@ function App() {
               </ul>
             </Headroom>
           </nav>
-
-
           <footer className="footer">
             This is Footer<br />
             This is Footer<br />
