@@ -1,7 +1,7 @@
 from django.contrib import admin
 from django.urls import path, include
 from rest_framework import routers
-from backend.diorama_layouts import views
+from diorama_layouts import views
 
 
 router = routers.DefaultRouter()
