@@ -19,7 +19,7 @@ function App() {
               <img src="/images/bgimages/mountains.svg" alt="mountains" />
               <div className="icons">
                 <Link to="/vk" exact={"true"} className="icon-link" target="_blank">
-                  <img src="/images/icons/vk.svg" alt="vk" />
+                  <img src="/static/images/icons/vk.svg" alt="vk" />
                 </Link>
                 <Link to="/instagram" exact={"true"} className="icon-link" target="_blank">
                   <img src="/images/icons/inst.svg" alt="instagram" />
