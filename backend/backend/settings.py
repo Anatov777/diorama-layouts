@@ -133,7 +133,7 @@ CORS_ORIGIN_WHITELIST = [
 ]
 
 # Activate Django-Heroku.
-django_heroku.backend.settings(locals())
+django_heroku.settings(locals())
 
 # Place static in the same location as webpack build files
 STATIC_ROOT = os.path.join(BASE_DIR, '..', 'frontend', 'build', 'static')
