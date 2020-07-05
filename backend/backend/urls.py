@@ -1,9 +1,8 @@
 from django.contrib import admin
 from django.urls import path, include
 from rest_framework import routers
-from diorama_layouts import views
+from backend.diorama_layouts import views
 
-# from /diorama_layouts/views import index
 
 router = routers.DefaultRouter()
 router.register(r'dioramas', views.DioramaView, 'diorama')
