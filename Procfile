@@ -1,3 +1,3 @@
 release: python backend/manage.py migrate
-release: cd backend
+release: pwd
 web: gunicorn backend.backend.wsgi --log-file -
