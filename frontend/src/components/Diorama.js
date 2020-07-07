@@ -15,7 +15,7 @@ export default class DioramasPage extends React.Component {
 
   refreshList = () => {
     axios
-      .get("http://localhost:8000/api/dioramas/")
+      .get("https://diorama-heroku-app.herokuapp.com/api/dioramas/")
       .then(res => this.setState({ layoutsList: res.data }))
       .catch(err => console.log(err));
   };
@@ -30,7 +30,7 @@ export default class DioramasPage extends React.Component {
     return newItems.map(item => (
         <td className="card" key={item.id}>
           <div className="img-area">
-            <Link to={"/dioramas/" + item.id}><img src={item.imgpath.split(";")[0]} className="img-list" alt="..." /></Link>
+            <Link to={"/dioramas/" + item.id}><img src={'/static' + item.imgpath.split(";")[0]} className="img-list" alt="..." /></Link>
           </div>
           <div className="card-body">
             <h3 className="card-title">{item.title}</h3>

@@ -14,7 +14,7 @@ export default class DioramaDetailPage extends React.Component {
 
   refreshList = (props) => {
     axios
-      .get("http://localhost:8000/api/dioramas/")
+      .get("https://diorama-heroku-app.herokuapp.com/api/dioramas/")
       .then(res => this.setState({ layoutsList: res.data[this.props.match.params.id-1] }))
       .catch(err => console.log(err));
   };

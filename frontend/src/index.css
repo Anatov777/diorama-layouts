@@ -6,9 +6,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: url(/images/bgimages/bgoldf4.jpg);
-  background-size: contain;
-
+  background-image: url(/static/images/bgimages/bgoldf4.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .wrapper {
@@ -33,6 +33,10 @@ body {
   align-items: center;
   min-height: 100%;
   height: 19vh;
+}
+
+.headdiv > img {
+  grid-row: 1 / span 2;
 }
 
 h1 {

@@ -16,13 +16,13 @@ function App() {
           <header id="header" className="header">
             <div className="headdiv">
               <h1>Order diorama</h1>
-              <img src="/images/bgimages/mountains.svg" alt="mountains" />
+              <img src="/static/images/bgimages/mountains.svg" alt="mountains" />
               <div className="icons">
                 <Link to="/vk" exact={"true"} className="icon-link" target="_blank">
                   <img src="/static/images/icons/vk.svg" alt="vk" />
                 </Link>
                 <Link to="/instagram" exact={"true"} className="icon-link" target="_blank">
-                  <img src="/images/icons/inst.svg" alt="instagram" />
+                  <img src="/static/images/icons/inst.svg" alt="instagram" />
                 </Link>
               </div>
             </div>
