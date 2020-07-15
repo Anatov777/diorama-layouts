@@ -9,5 +9,5 @@ from django.views.decorators.cache import never_cache
 index = never_cache(TemplateView.as_view(template_name='index.html'))
 
 class DioramaView(viewsets.ModelViewSet):
-    serializer_class = DioramaSerializer       
-    queryset = Diorama.objects.all()          
+    serializer_class = DioramaSerializer
+    queryset = Diorama.objects.all().order_by('id')        

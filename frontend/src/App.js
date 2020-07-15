@@ -15,7 +15,7 @@ function App() {
         <div className="wrapper">
           <header id="header" className="header">
             <div className="headdiv">
-              <h1>Order diorama</h1>
+              <h1>Диорамы на заказ</h1>
               <img src="/static/images/bgimages/mountains.svg" alt="mountains" />
               <div className="icons">
                 <Link to="/vk" exact={"true"} className="icon-link" target="_blank">
@@ -35,15 +35,15 @@ function App() {
               <Route exact={true} path='/contacts' component={ContactsPage} />
             </Switch>
             <Route exact={true} path="/dioramas/:id" component={DioramaDetailPage} />
-            <Route path='/vk' component={() => { window.location = 'https://vk.com/'; return null; }} />
+            <Route path='/vk' component={() => { window.location = 'https://vk.com/id8360008'; return null; }} />
             <Route path='/instagram' component={() => { window.location = 'https://instagram.com/'; return null; }} />
           </main>
           <nav role='navigation' id="nav">
             <Headroom upTolerance={1}>
               <ul>
-                <li><NavLink to="/" exact={true}>Home</NavLink></li>
-                <li><NavLink to="/dioramas" exact={true}>Layouts</NavLink></li>
-                <li><NavLink to="/contacts" exact={true}>Contacts</NavLink></li>
+                <li><NavLink to="/" exact={true}>Главная</NavLink></li>
+                <li><NavLink to="/dioramas" exact={true}>Работы</NavLink></li>
+                <li><NavLink to="/contacts" exact={true}>Контакты</NavLink></li>
               </ul>
             </Headroom>
           </nav>

@@ -8,8 +8,12 @@ class ContactsPage extends React.Component {
 
   render() {
     return (
-      <div className="">
-        <h1>test@gmail.com</h1>
+      <div className="contacts">
+        <h2>Контакты</h2>
+        <div className="contacts__content">
+          <div>anatanatov@mail.ru</div>
+          <div>+79119543437</div>
+        </div>
       </div>
     );
   }

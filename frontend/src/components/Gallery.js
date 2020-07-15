@@ -19,7 +19,7 @@ function PhotoGallery(props) {
 
 
   const photos = props.images.map(x => ({
-    src: "/static/images/" + x,
+    src: "/static/images/dioramas" + x,
     width: 1,
     height: 1,
   }));

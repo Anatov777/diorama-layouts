@@ -1,8 +1,8 @@
 import React from 'react';
 import axios from "axios";
 import PaginacionTabla from "./Pagination";
-import { Link } from "react-router-dom";
-
+import { Link, Route } from "react-router-dom";
+import DioramaDetailPage from "./DioramaDetails";
 
 
 export default class DioramasPage extends React.Component {
@@ -15,7 +15,7 @@ export default class DioramasPage extends React.Component {
 
   refreshList = () => {
     axios
-      .get("https://diorama-heroku-app.herokuapp.com/api/dioramas/")
+      .get("http://127.0.0.1:8000/api/dioramas/")
       .then(res => this.setState({ layoutsList: res.data }))
       .catch(err => console.log(err));
   };
@@ -30,11 +30,11 @@ export default class DioramasPage extends React.Component {
     return newItems.map(item => (
         <td className="card" key={item.id}>
           <div className="img-area">
-            <Link to={"/dioramas/" + item.id}><img src={'/static' + item.imgpath.split(";")[0]} className="img-list" alt="..." /></Link>
+            <Link to={"/dioramas/" + item.id}><img src={'/static/images/dioramas' + item.imgpath.split(";")[0]} className="img-list" alt="..." /></Link>
           </div>
           <div className="card-body">
             <h3 className="card-title">{item.title}</h3>
-            <Link to={"/dioramas/" + item.id} className="btn-more" > More </Link>
+            <Link to={"/dioramas/" + item.id} className="btn-more" > Подробнее </Link>
           </div>
         </td>
     ));
@@ -45,7 +45,7 @@ export default class DioramasPage extends React.Component {
       <div>
         <div>
           <h2 id="dioramas">
-            Dioramas
+            Мои работы
           </h2>
           <table className="table table-hover">
             <PaginacionTabla
@@ -57,7 +57,7 @@ export default class DioramasPage extends React.Component {
           </table>
         </div>
         <div>
-          {/* <LoginPage /> */}
+          
         </div>
       </div>
     );

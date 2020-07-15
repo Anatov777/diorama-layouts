@@ -8,8 +8,23 @@ class HomePage extends React.Component {
 
   render() {
     return (
-      <div className="">
-        Yes
+      <div className="home-content">
+        <div className="home-content__head">
+          <div><img src="/static/images/baby.jpg" /></div>
+          <div className="home-content__title">
+            <h2 className="home-content__title-text">
+              Диорамщик-моделист
+            </h2>
+            <div className="home-content__name">Моисей Соломонович</div>
+            <div className="contacts__content">
+              <div>anatanatov@mail.ru</div>
+              <div>+79119543437</div>
+            </div>
+          </div>
+        </div>
+        <div className="home-content__text">
+            Занимаюсь созданием различных диорам, макетов и моделей. Делаю работы на заказ.
+        </div>
       </div>
     );
   }
