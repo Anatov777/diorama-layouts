@@ -1,4 +1,6 @@
 import React from 'react';
+import DioramasPage from "./Diorama"
+
 
 class HomePage extends React.Component {
   // constructor(props) {
@@ -10,7 +12,7 @@ class HomePage extends React.Component {
     return (
       <div className="home-content">
         <div className="home-content__head">
-          <div><img src="/static/images/baby.jpg" /></div>
+          <div><img src="/static/images/baby.jpg" alt="avatar" /></div>
           <div className="home-content__title">
             <h2 className="home-content__title-text">
               Диорамщик-моделист
@@ -24,6 +26,9 @@ class HomePage extends React.Component {
         </div>
         <div className="home-content__text">
             Занимаюсь созданием различных диорам, макетов и моделей. Делаю работы на заказ.
+        </div>
+        <div>
+          <DioramasPage />
         </div>
       </div>
     );

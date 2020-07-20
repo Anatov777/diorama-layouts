@@ -5,7 +5,7 @@ from django.db import models
 class Diorama(models.Model):
       title = models.CharField(max_length=120)
       description = models.TextField()
-      imgpath = models.CharField(max_length=120)
+      imgpath = models.CharField(max_length=1024)
 
       def _str_(self):
         return self.title
