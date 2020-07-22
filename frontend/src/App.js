@@ -62,7 +62,7 @@ function App() {
             <Route
               path="/instagram"
               component={() => {
-                window.location = "https://instagram.com/";
+                window.location = "https://www.instagram.com/vakhnarius/?igshid=1edyys4nafp51";
                 return null;
               }}
             />

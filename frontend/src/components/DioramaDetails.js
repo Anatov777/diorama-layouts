@@ -13,8 +13,10 @@ export default class DioramaDetailPage extends React.Component {
 
   refreshList = (props) => {
     axios
-      .get("http://127.0.0.1:8000/api/dioramas/")
-      .then((res) => this.setState({ layoutsList: res.data[this.props.match.params.id - 1] }))
+      .get(
+        "http://127.0.0.1:8000/api/dioramas/" + this.props.match.params.id + "/"
+      )
+      .then((res) => this.setState({ layoutsList: res.data }))
       .catch((err) => console.log(err));
   };
 
@@ -47,13 +49,14 @@ export default class DioramaDetailPage extends React.Component {
               src="https://www.youtube.com/embed/hcYYYt-6zYA"
               frameBorder="0"
               allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
+              allowFullScreen="true"
               title="ges"
             ></iframe>
           </div>
         ) : (
           ""
         )}
+
         {this.state.layoutsList.title === "Водопад" ? (
           <div className="video-frame">
             <iframe
@@ -71,8 +74,24 @@ export default class DioramaDetailPage extends React.Component {
               src="https://www.youtube.com/embed/t2tntPCXmE8"
               frameborder="0"
               allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
+              allowFullScreen="true"
               title="waterfallSupport"
+            ></iframe>
+          </div>
+        ) : (
+          ""
+        )}
+
+        {this.state.layoutsList.title === "Tank" ? (
+          <div className="video-frame">
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/BJSWEreOkIU"
+              frameborder="0"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen="true"
+              title="tank"
             ></iframe>
           </div>
         ) : (
