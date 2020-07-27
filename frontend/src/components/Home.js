@@ -3,16 +3,12 @@ import DioramasPage from "./Diorama"
 
 
 class HomePage extends React.Component {
-  // constructor(props) {
-  //   super(props);
-
-  // }
 
   render() {
     return (
       <div className="home-content">
         <div className="home-content__head">
-          <div><img src="/static/images/baby.jpg" alt="avatar" /></div>
+          <div className="home-content__avatar"><img src="/static/images/baby.jpg" alt="avatar" /></div>
           <div className="home-content__title">
             <h2 className="home-content__title-text">
               Диорамщик-моделист
