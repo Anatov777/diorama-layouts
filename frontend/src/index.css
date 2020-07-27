@@ -385,14 +385,14 @@ h2 {
   height: auto;
 }
 
-@media (max-width: 599px) {
+@media (max-width: 1250px) {
   .react-photo-gallery--gallery > div img {
     width: 46%;
     height: auto;
   }
 }
 
-@media (max-width: 350px) {
+@media (max-width: 768px) {
   .react-photo-gallery--gallery > div img {
     width: 96%;
     height: auto;
