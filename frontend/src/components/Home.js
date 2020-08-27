@@ -8,7 +8,7 @@ class HomePage extends React.Component {
     return (
       <div className="home-content">
         <div className="home-content__head">
-          <div className="home-content__avatar"><img src="/static/images/baby.jpg" alt="avatar" /></div>
+          <div className="home-content__avatar"><img src="/static/images/avatar.jpg" alt="avatar" /></div>
           <div className="home-content__title">
             <h2 className="home-content__title-text">
               Диорамщик-моделист
@@ -16,12 +16,12 @@ class HomePage extends React.Component {
             <div className="home-content__name">Моисей Соломонович</div>
             <div className="contacts__content">
               <div>anatanatov@mail.ru</div>
-              <div>+79119543437</div>
+              <a href="+79119543437">+79119543437</a>
             </div>
           </div>
         </div>
         <div className="home-content__text">
-            Занимаюсь созданием различных диорам, макетов и моделей. Делаю работы на заказ.
+            Занимаюсь ландшафтным и архитектурным макетированием. Делаю на заказ диорамы, макеты и модели любых объектов. Также у меня можно заказать дизайн квартиры, помещения или улицы. Беру заказы любой сложности.
         </div>
         <div>
           <DioramasPage />
