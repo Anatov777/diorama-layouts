@@ -16,7 +16,13 @@ function App() {
 
           <header id="header" className="header">
             <div className="headdiv">
-              <h1>Диорамы на заказ</h1>
+              <Link
+                to="/"
+                exact={"true"}
+                className="icon-link"
+              >
+                <h1>Диорамы на заказ</h1>
+              </Link>
               <img
                 src="/static/images/bgimages/mountains.svg"
                 alt="mountains"

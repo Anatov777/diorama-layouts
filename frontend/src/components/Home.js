@@ -8,7 +8,7 @@ class HomePage extends React.Component {
     return (
       <div className="home-content">
         <div className="home-content__head">
-          <div className="home-content__avatar"><img src="/static/images/avatar.jpg" alt="avatar" /></div>
+          <div className="home-content__avatar"><img src="/static/images/master.jpg" alt="avatar" /></div>
           <div className="home-content__title">
             <h2 className="home-content__title-text">
               Диорамщик-моделист

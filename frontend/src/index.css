@@ -55,7 +55,6 @@ body {
 
 .headdiv > h1 {
   grid-column: 1;
-  color: #8a5300;
 }
 
 .icons {
@@ -253,6 +252,11 @@ nav ul li a {
 .logo-image {
   grid-column: 1;
   grid-row: 1 / span 3;
+}
+
+.icon-link {
+  text-decoration: none;
+  color: #8a5300;
 }
 
 .icon-link > img {
