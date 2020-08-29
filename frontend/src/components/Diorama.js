@@ -24,18 +24,6 @@ export default class DioramasPage extends React.Component {
   renderItems = () => {
     const dioramas = this.state.layoutsList;
 
-    // return dioramas.map(item => (
-    //     <td className="card" key={item.id}>
-    //       <div className="img-area">
-    //         <Link to={"/dioramas/" + item.id}><img src={'/static/images/dioramas' + item.imgpath.split(";")[0]} className="img-list" alt="..." /></Link>
-    //       </div>
-    //       <div className="card-body">
-    //         <h3 className="card-title">{item.title}</h3>
-    //         <Link to={"/dioramas/" + item.id} className="btn-more" > Подробнее </Link>
-    //       </div>
-    //     </td>
-    // ));
-
     return dioramas.map((item) => (
       <div className="card" key={item.id}>
         <div className="card__content">
@@ -67,15 +55,6 @@ export default class DioramasPage extends React.Component {
       <div>
         <div className="dioramas-block">
           <h2 id="dioramas">Мои работы</h2>
-          {/* <table className="table table-hover">
-            <PaginacionTabla
-              itemsperpage={12}
-              nocolumns={0}
-              items={this.renderItems()}
-              pagesspan={5}
-            />
-          </table> */}
-        {/* </div> */}
         <div className="dioramas-list">{this.renderItems()}</div>
         </div>
       </div>

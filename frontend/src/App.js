@@ -98,7 +98,7 @@ function App() {
             <div className="footer__contacts">
               <span>Связаться со мной:</span>
               <span>anatanatov@mail.ru</span>
-              <a href="+79119543437">+79119543437</a>
+              <a href="tel:+79119543437">+79119543437</a>
             </div>
           </footer>
         </div>

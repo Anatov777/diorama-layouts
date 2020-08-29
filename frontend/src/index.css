@@ -377,7 +377,17 @@ nav ul li a {
 
 .back-link {
   text-align: left;
-  margin: 20px 0px 0px 20px;
+  margin: 20px 0px 20px 20px;
+}
+
+.back-link a {
+  text-decoration: none;
+  border: 1px solid #8a7967;
+  border-radius: 20px;
+  width: fit-content;
+  padding: 5px;
+  background-color: #56a0d3;
+  color: #00112c;
 }
 
 .headroom--pinned {
@@ -394,12 +404,20 @@ h2 {
   font-size: 32pt;
 }
 
-.react-photo-gallery--gallery {
+/* .react-photo-gallery--gallery {
   width: 100%;
 }
 
 .react-photo-gallery--gallery > div {
   justify-content: center;
+  line-height: 0;
+   
+   -webkit-column-count: 5;
+   -webkit-column-gap:   0px;
+   -moz-column-count:    5;
+   -moz-column-gap:      0px;
+   column-count:         5;
+   column-gap:           0px;
 }
 
 .react-photo-gallery--gallery > div img {
@@ -413,7 +431,58 @@ h2 {
   box-sizing: border-box;
   transition: all 0.4s ease-in-out;
   background-color: black;
+} */
+
+/* Gallery */
+
+.photos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  padding: 0 15px;
 }
+
+.img__link {
+  display: block;
+  position: relative;
+  max-width: 100%;
+  flex: 1 0 auto;
+}
+
+.img__link::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+}
+
+.img__link::before {
+  font-family: "FontAwesome";
+  content: "\f00e";
+  position: absolute;
+  opacity: 0;
+  left: 50%;
+  top: 50%;
+  font-size: 30px;
+  transform: translate(-50%, -50%);
+  color: #fff;
+}
+
+.img__link:hover:before,
+.img__link:hover:after {
+  opacity: 1;
+}
+
+.img__link img {
+  max-height: 250px;
+  max-width: 100%;
+}
+
+/* Video */
 
 .video-frame {
   justify-content: center;
@@ -438,7 +507,7 @@ iframe {
 
 #button {
   display: inline-block;
-  background-color: #FF9800;
+  background-color: #ff9800;
   width: 50px;
   height: 50px;
   text-align: center;
@@ -446,8 +515,7 @@ iframe {
   position: fixed;
   bottom: 30px;
   right: 30px;
-  transition: background-color .3s, 
-    opacity .5s, visibility .5s;
+  transition: background-color 0.3s, opacity 0.5s, visibility 0.5s;
   opacity: 0;
   visibility: hidden;
   z-index: 1000;
@@ -520,6 +588,6 @@ iframe {
     font-size: 1.5em;
   }
   .home-content__text {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
 }

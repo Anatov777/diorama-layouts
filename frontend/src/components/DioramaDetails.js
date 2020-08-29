@@ -1,7 +1,6 @@
 import React from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import PhotoGallery from "./Gallery";
 
 export default class DioramaDetailPage extends React.Component {
   constructor(props) {
@@ -34,11 +33,19 @@ export default class DioramaDetailPage extends React.Component {
     return (
       <div className="diorama-detail__content">
         <div className="back-link">
-          <Link to="/dioramas"> Back </Link>
+          <Link to="/dioramas"> Галерея </Link>
         </div>
         <h2 className="details-title"> {this.state.layoutsList.title} </h2>
 
-        <PhotoGallery images={this.getImage()} />
+        <div className="photos">
+          {
+            this.getImage().map((item) => (
+              <a href={"/static/images/dioramas"+item} data-fancybox="gallery" className="img__link" key={item}>
+                <img src={"/static/images/dioramas"+item} alt={item.split('/')[item.split('/').length - 1]} />
+              </a>
+            ))
+          }
+        </div>
 
         {this.state.layoutsList.title === "Чиркейская ГЭС" ? (
           <div className="video-frame">
@@ -63,18 +70,18 @@ export default class DioramaDetailPage extends React.Component {
               width="560"
               height="315"
               src="https://www.youtube.com/embed/zX2yk-HVAmM"
-              frameborder="0"
+              frameBorder="0"
               allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
+              allowFullScreen={true}
               title="waterfall"
             ></iframe>
             <iframe
               width="560"
               height="315"
               src="https://www.youtube.com/embed/t2tntPCXmE8"
-              frameborder="0"
+              frameBorder="0"
               allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen="true"
+              allowFullScreen={true}
               title="waterfallSupport"
             ></iframe>
           </div>
@@ -88,7 +95,7 @@ export default class DioramaDetailPage extends React.Component {
               width="560"
               height="315"
               src="https://www.youtube.com/embed/BJSWEreOkIU"
-              frameborder="0"
+              frameBorder="0"
               allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen="true"
               title="tank"
@@ -97,7 +104,6 @@ export default class DioramaDetailPage extends React.Component {
         ) : (
           ""
         )}
-        {/* <p className="card-text"> {this.state.layoutsList.description} </p> */}
       </div>
     );
   };
