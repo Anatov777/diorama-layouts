@@ -12,7 +12,7 @@ export default class DioramasPage extends React.Component {
 
   refreshList = () => {
     axios
-      .get("http://127.0.0.1:8000/api/dioramas/")
+      .get("https://diorama-heroku-app.herokuapp.com/api/dioramas/")
       .then((res) => this.setState({ layoutsList: res.data }))
       .catch((err) => console.log(err));
   };
@@ -52,7 +52,7 @@ export default class DioramasPage extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="dioramas">
         <div className="dioramas-block">
           <h2 id="dioramas">Мои работы</h2>
         <div className="dioramas-list">{this.renderItems()}</div>
