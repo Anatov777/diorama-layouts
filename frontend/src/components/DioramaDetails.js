@@ -13,7 +13,7 @@ export default class DioramaDetailPage extends React.Component {
   refreshList = (props) => {
     axios
       .get(
-        "http://127.0.0.1:8000/api/dioramas/" + this.props.match.params.id + "/"
+        "https://diorama-heroku-app.herokuapp.com/api/dioramas/" + this.props.match.params.id + "/"
       )
       .then((res) => this.setState({ layoutsList: res.data }))
       .catch((err) => console.log(err));
@@ -27,6 +27,25 @@ export default class DioramaDetailPage extends React.Component {
     let item = String(this.state.layoutsList.imgpath);
     item = item.split(";");
     return item;
+  }
+
+  getVideo(videoName, videoLink) {
+    return this.state.layoutsList.title === videoName ? (
+      <div className="video-frame">
+        <iframe
+          className="video-frame"
+          width="560"
+          height="315"
+          src={videoLink}
+          frameBorder="0"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen={true}
+          title="ges"
+        ></iframe>
+      </div>
+    ) : (
+      ""
+    )
   }
 
   renderItems = () => {
@@ -47,63 +66,11 @@ export default class DioramaDetailPage extends React.Component {
           }
         </div>
 
-        {this.state.layoutsList.title === "Чиркейская ГЭС" ? (
-          <div className="video-frame">
-            <iframe
-              className="video-frame"
-              width="560"
-              height="315"
-              src="https://www.youtube.com/embed/hcYYYt-6zYA"
-              frameBorder="0"
-              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen="true"
-              title="ges"
-            ></iframe>
-          </div>
-        ) : (
-          ""
-        )}
-
-        {this.state.layoutsList.title === "Водопад" ? (
-          <div className="video-frame">
-            <iframe
-              width="560"
-              height="315"
-              src="https://www.youtube.com/embed/zX2yk-HVAmM"
-              frameBorder="0"
-              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen={true}
-              title="waterfall"
-            ></iframe>
-            <iframe
-              width="560"
-              height="315"
-              src="https://www.youtube.com/embed/t2tntPCXmE8"
-              frameBorder="0"
-              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen={true}
-              title="waterfallSupport"
-            ></iframe>
-          </div>
-        ) : (
-          ""
-        )}
-
-        {this.state.layoutsList.title === "Tank" ? (
-          <div className="video-frame">
-            <iframe
-              width="560"
-              height="315"
-              src="https://www.youtube.com/embed/BJSWEreOkIU"
-              frameBorder="0"
-              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen="true"
-              title="tank"
-            ></iframe>
-          </div>
-        ) : (
-          ""
-        )}
+        {this.getVideo("Чиркейская ГЭС", "https://www.youtube.com/embed/hcYYYt-6zYA")}
+        {this.getVideo("Водопад", "https://www.youtube.com/embed/zX2yk-HVAmM")}
+        {this.getVideo("Водопад", "https://www.youtube.com/embed/t2tntPCXmE8")}
+        {this.getVideo("Tank", "https://www.youtube.com/embed/BJSWEreOkIU")}
+        {this.getVideo("Домик", "https://www.youtube.com/embed/nsdzMW822PE")}
       </div>
     );
   };
