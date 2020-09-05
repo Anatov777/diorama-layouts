@@ -1,6 +1,8 @@
 import React from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 export default class DioramasPage extends React.Component {
   constructor(props) {
@@ -19,6 +21,9 @@ export default class DioramasPage extends React.Component {
 
   componentDidMount() {
     this.refreshList();
+    AOS.init({
+      duration : 2000
+    })
   }
 
   renderItems = () => {
@@ -53,9 +58,9 @@ export default class DioramasPage extends React.Component {
   render() {
     return (
       <div className="dioramas">
-        <div className="dioramas-block">
-          <h2 id="dioramas">Мои работы</h2>
-        <div className="dioramas-list">{this.renderItems()}</div>
+        <div className="dioramas-block" data-aos="fade-up">
+          <h2 id="dioramas" data-aos="zoom-in" data-aos-duration="3000">Мои работы</h2>
+          <div className="dioramas-list">{this.renderItems()}</div>
         </div>
       </div>
     );

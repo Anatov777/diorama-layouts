@@ -15,8 +15,10 @@ class HomePage extends React.Component {
             </h2>
             <div className="home-content__name">Моисей Соломонович</div>
             <div className="contacts__content">
-              <div>anatanatov@mail.ru</div>
-              <a href="tel:+79119543437">+79119543437</a>
+              <div className="contacts__email">anatanatov@mail.ru</div>
+              <div className="contacts__phone">
+                <a href="tel:+79119543437">+79119543437</a>
+              </div>
             </div>
           </div>
         </div>
