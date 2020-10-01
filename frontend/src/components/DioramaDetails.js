@@ -59,9 +59,11 @@ export default class DioramaDetailPage extends React.Component {
         <div className="photos">
           {
             this.getImage().map((item) => (
-              <a href={"/static/images/dioramas"+item} data-fancybox="gallery" className="img__link" key={item}>
-                <img src={"/static/images/dioramas"+item} alt={item.split('/')[item.split('/').length - 1]} />
-              </a>
+              <div className="photos__content">
+                <a href={"/static/images/dioramas"+item} data-fancybox="gallery" className="photos__link" key={item}>
+                  <img src={"/static/images/dioramas"+item} alt={item.split('/')[item.split('/').length - 1]} />
+                </a>
+              </div>
             ))
           }
         </div>

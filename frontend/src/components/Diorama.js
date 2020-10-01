@@ -22,7 +22,7 @@ export default class DioramasPage extends React.Component {
   componentDidMount() {
     this.refreshList();
     AOS.init({
-      duration : 2000
+      duration: 2000
     })
   }
 
@@ -32,23 +32,21 @@ export default class DioramasPage extends React.Component {
     return dioramas.map((item) => (
       <div className="card" key={item.id}>
         <div className="card__content">
-          <div className="card__borders">
-            <div className="img-area">
-              <Link to={"/dioramas/" + item.id}>
-                <img
-                  src={"/static/images/dioramas" + item.imgpath.split(";")[0]}
-                  className="img-list"
-                  alt={item.title}
-                />
-              </Link>
-            </div>
-            <div className="card-body">
-              <h3 className="card-title">{item.title}</h3>
-              <Link to={"/dioramas/" + item.id} className="btn-more">
-                {" "}
+          <div className="card__image">
+            <Link to={"/dioramas/" + item.id}>
+              <img
+                src={"/static/images/dioramas" + item.imgpath.split(";")[0]}
+                className="img-list"
+                alt={item.title}
+              />
+            </Link>
+          </div>
+          <div className="card__text">
+            <h3 className="card-title">{item.title}</h3>
+            <Link to={"/dioramas/" + item.id} className="btn-more">
+              {" "}
                 Подробнее{" "}
-              </Link>
-            </div>
+            </Link>
           </div>
         </div>
       </div>
